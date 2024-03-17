@@ -26,6 +26,7 @@ public class PatientController {
 
     @GetMapping("{id}")
     public PatientDTO getPatient(@PathVariable long id) {
+        log.info("getPatient {}", id);
         return patientService.getPatient(id);
     }
 
